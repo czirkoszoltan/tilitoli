@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="tilitoli.js?v1"></script>
+        <style>
+            div.container { position: relative; }
+            div.piece {
+                position: absolute; 
+                background: url(parduc.png);
+                border-radius: 10px;
+                box-shadow: 0 0 0 1px #000 inset;
+                transition: top 0.1s, left 0.1s;
+            }
+            div.small {
+                width: 100px;
+                height: 100px;
+                background: url(parduc.png);
+                background-size: contain;
+                margin-bottom: 1em;
+                border-bottom-right-radius: 25px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="small">
+        </div>
+        
+        <div id="wrapper">
+        </div>
+    </body>
+</html>
