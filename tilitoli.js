@@ -182,8 +182,8 @@ class Drawer {
 
         this.size = 0;
         this.pieces = {};
-
-        document.addEventListener("keydown", function(event) {
+        
+        var keydown = function(event) {
             switch (event.code) {
                 case "ArrowLeft":
                     this.bus.send_event(new MovePressed(+1, 0));
@@ -198,7 +198,9 @@ class Drawer {
                     this.bus.send_event(new MovePressed(0, -1));
                     break;
             }
-        });
+        };
+
+        document.addEventListener("keydown", keydown.bind(this));
 
         this.bus.add_listener(this);
     }
